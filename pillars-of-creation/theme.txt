@@ -1,0 +1,81 @@
+###########################################
+# Pillars of Creation - GRUB2 Theme       #
+# Designed for 1920x1080 Resolution       #
+# Created by texxasrulez                  #
+###########################################
+
+# Global Property
+title-text: ""
+title-font: "DejaVu Sans Mono 22"
+title-color: "#ffffff"
+message-font: "DejaVu Sans Mono 22"
+message-color: "#ffffff"
+message-bg-color: "#f2f2f2"
+desktop-image: "background.png"
+desktop-color: "#000000"
+
+# Terminal Box Decoration
+terminal-font: "Terminus Regular 14"
+terminal-box: "terminal_*.png"
+
+# Show the boot menu
++ boot_menu {
+		top = 2%
+		left = 80%-375
+		width = 750
+		height = 525
+		item_font = "FreeSans Regular 22"
+		selected_item_font = "FreeSans Bold 22"
+		item_color = "#ffffff"
+		selected_item_color = "#c3d4e1"
+		icon_width = 48
+		icon_height = 48
+		item_icon_space = 20
+		item_height = 50
+		item_padding = 5
+		item_spacing = 10
+		selected_item_pixmap_style= "select_bkg_*.png"
+		menu_pixmap_style = "menu_bkg_*.png"
+		scrollbar = false
+		scrollbar_width = 20
+		scrollbar_thumb = "sb_thumb_*.png"
+		scrollbar_frame = "sb_frame_*.png"
+}
+
+# Show GRUB Commands.
++ hbox {
+		top = 90%
+		left = 28%
+		+ label {text = "Up/Dn ↑ ↓: " font = "FreeSans Bold 22" color = "#ffffff" align = "left"}
+		+ label {text = "Selection Option     " font = "FreeSans Bold 22" color = "#b7e4f2" align = "left"}
+		+ label {text = "Enter: " font = "FreeSans Bold 22" color = "#ffffff" align = "left"}
+		+ label {text = "Boot Selection     " font = "FreeSans Bold 22" color = "#b7e4f2" align = "left"}
+		+ label {text = "e: " font = "FreeSans Bold 22" color = "#ffffff" align = "left"}
+		+ label {text = "Edit Selection     " font = "FreeSans Bold 22" color = "#b7e4f2" align = "left"}
+		+ label {text = "c: " font = "FreeSans Bold 22" color = "#ffffff" align = "left"}
+		+ label {text = "GRUB Commandline" font = "FreeSans Bold 22" color = "#b7e4f2" align = "left"}
+}
+
+# Show logo and circular progress
++ image {
+		top = 70%+20
+		left = 90%
+		width = 200
+		height = 200
+		file = "jwst_logo.png"
+}
+
++ circular_progress
+{
+		id = "__timeout__"
+		top = 70%+20
+		left = 90%
+		width = 200
+		height = 200
+		num_ticks = 30
+		ticks_disappear = true
+		start_angle = -64
+		end_angle = -64
+		center_bitmap = "tick-blank.png"
+		tick_bitmap = "tick.png"
+}
